@@ -20,4 +20,4 @@
 
 --PUNTO11-- --select DEPARTMENT.Dname, max(EMPLOYEE.Salary) as SalarioMaximo, min(EMPLOYEE.Salary) as SalarioMinimo from DEPARTMENT  join EMPLOYEE  on DEPARTMENT.Dnumber = EMPLOYEE.Dno group by DEPARTMENT.Dname;--
 
---punto12-- --select Essn, count(*) as Total_Dependientes, group_concat(relationship) as Relaciones from DEPENCDENCIA group by essn  --
+--punto12-- --select Essn, count(*) as Total_Dependientes, group_concat(relationship) as Relaciones from DEPENCDENCIA group by essn;  --
