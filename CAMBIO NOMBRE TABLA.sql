@@ -1,0 +1,3 @@
+USE taller2;
+GO
+EXEC sp_rename 'DEPENDENT', 'DEPENCDENCIA';
