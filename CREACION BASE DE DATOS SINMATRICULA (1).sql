@@ -1,4 +1,3 @@
-
 use taller2;
 CREATE TABLE EMPLOYEE (
     Fname VARCHAR(15),
@@ -12,7 +11,6 @@ CREATE TABLE EMPLOYEE (
     Super_ssn INT,
     Dno INT
 );
-
 
 INSERT INTO EMPLOYEE (Fname, Minit, Lname, Ssn, Bdate, Address, Sex, Salary, Super_ssn, Dno)
 VALUES
