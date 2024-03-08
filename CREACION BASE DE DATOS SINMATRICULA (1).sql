@@ -1,4 +1,4 @@
--- Crear tabla EMPLOYEE
+
 use taller2;
 CREATE TABLE EMPLOYEE (
     Fname VARCHAR(15),
@@ -13,7 +13,7 @@ CREATE TABLE EMPLOYEE (
     Dno INT
 );
 
--- Insertar datos en la tabla EMPLOYEE
+
 INSERT INTO EMPLOYEE (Fname, Minit, Lname, Ssn, Bdate, Address, Sex, Salary, Super_ssn, Dno)
 VALUES
 ('John','B','Smith',123456789,'1965-01-09','731 Fondren, Houston TX','M',30000,333445555,5),
@@ -25,7 +25,7 @@ VALUES
 ('Ahmad','V','Jabbar',987987987,'1969-03-29','980 Dallas, Houston TX','M',25000,987654321,4),
 ('James','E','Borg',888665555,'1937-11-10','450 Stone, Houston TX','M',55000,NULL,1);
 use taller2;
--- Crear tabla DEPARTMENT
+
 CREATE TABLE DEPARTMENT (
     Dname VARCHAR(15),
     Dnumber INT PRIMARY KEY,
@@ -33,21 +33,21 @@ CREATE TABLE DEPARTMENT (
     Mgr_start_date DATE
 );
 
--- Insertar datos en la tabla DEPARTMENT
+
 INSERT INTO DEPARTMENT (Dname, Dnumber, Mgr_ssn, Mgr_start_date)
 VALUES
 ('Research',5,333445555,'1988-05-22'),
 ('Administration',4,987654321,'1995-01-01'),
 ('Headquarters',1,888665555,'1981-06-19');
 
--- Crear tabla DEPT_LOCATIONS
+
 CREATE TABLE DEPT_LOCATIONS (
     Dnumber INT,
     Dlocation VARCHAR(15),
     PRIMARY KEY (Dnumber, Dlocation)
 );
 
--- Insertar datos en la tabla DEPT_LOCATIONS
+
 INSERT INTO DEPT_LOCATIONS (Dnumber, Dlocation)
 VALUES
 (1,'Houston'),
@@ -56,7 +56,7 @@ VALUES
 (5,'Sugarland'),
 (5,'Houston');
 
--- Crear tabla PROJECT
+
 CREATE TABLE PROJECT (
     Pname VARCHAR(15),
     Pnumber INT PRIMARY KEY,
@@ -64,7 +64,7 @@ CREATE TABLE PROJECT (
     Dnum INT
 );
 
--- Insertar datos en la tabla PROJECT
+
 INSERT INTO PROJECT (Pname, Pnumber, Plocation, Dnum)
 VALUES
 ('ProductX',1,'Bellaire',5),
@@ -74,7 +74,6 @@ VALUES
 ('Reorganization',20,'Houston',1),
 ('Newbenefits',30,'Stafford',4);
 
--- Crear tabla WORKS_ON
 CREATE TABLE WORKS_ON (
     Essn INT,
     Pno INT,
@@ -84,7 +83,7 @@ CREATE TABLE WORKS_ON (
     FOREIGN KEY (Pno) REFERENCES PROJECT(Pnumber)
 );
 
--- Insertar datos en la tabla WORKS_ON
+
 INSERT INTO WORKS_ON (Essn, Pno, Hours)
 VALUES
 (123456789,1,32.5),
@@ -104,7 +103,7 @@ VALUES
 (987654321,20,15.0),
 (888665555,20,16.0);
 
--- Crear tabla DEPENDENT
+
 CREATE TABLE DEPENDENT (
     Essn INT,
     Dependent_name VARCHAR(15),
@@ -115,7 +114,7 @@ CREATE TABLE DEPENDENT (
     FOREIGN KEY (Essn) REFERENCES EMPLOYEE(Ssn)
 );
 
--- Insertar datos en la tabla DEPENDENT
+
 INSERT INTO DEPENDENT (Essn, Dependent_name, Sex, Bdate, Relationship)
 VALUES
 (333445555,'Alice','F','1986-04-04','Daughter'),
