@@ -65,16 +65,8 @@ Fecha_Comentario date NOT NULL,
 );
 go
 
-CREATE TABLE Mesa_Reservas (
-ID_Mesa_Reservas INT IDENTITY (1,1) not null,
-ID_Mesas int not null,
-ID_Reservas int not null,
-);
-go
 
-ALTER TABLE Mesa_Reservas
-ADD CONSTRAINT PK_Mesa_Reservas PRIMARY KEY (ID_Mesa_Reservas);
-go
+
 
 ALTER TABLE Restaurantes
 ADD CONSTRAINT PK_Restaurantes PRIMARY KEY (ID_Restaurante);
@@ -107,18 +99,6 @@ ADD CONSTRAINT FK_Mesa_Restaurantes
 FOREIGN KEY (ID_Restaurante) REFERENCES Restaurantes(ID_Restaurante);
 go
 
-
-ALTER TABLE Mesa_Reservas
-ADD CONSTRAINT FK_Mesa_Reservas_Mesa
-FOREIGN KEY (ID_Mesas) REFERENCES Mesa(ID_Mesa);
-go
-
-
-
-ALTER TABLE Mesa_Reservas
-ADD CONSTRAINT FK_Mesa_Reservas_Reservas
-FOREIGN KEY (ID_Reservas) REFERENCES Reservas(ID_Reservas);
-go
 
 ALTER TABLE Reservas
 ADD CONSTRAINT FK_Reservas_Restaurantes
