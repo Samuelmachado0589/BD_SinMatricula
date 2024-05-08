@@ -4,10 +4,10 @@ VALUES
 ( 'El Fogoncito', 'Calle 12 #34-56', 'Comida Colombiana', 50, 5, 'SI', '08:00 am', '10:00 pm'),
 ('La Parrilla', 'Avenida 5 #12-34', 'Comida Argentina', 56, 7, 'NO', '11:00 am', '11:00 pm'),
 ( 'El Saborito', 'Calle 7 #45-67', 'Comida Mexicana', 40, 8, 'SI', '09:00 am', '09:00 pm'),
-( 'La Casa de Toño', 'Carrera 10 #23-45', 'Comida Italiana', 42, 6, 'NO', '12:00 pm', '10:00 pm'),
-( 'El Jardín', 'Calle 15 #67-89', 'Comida Vegetariana', 50, 5, 'SI', '10:00 am', '09:00 pm'),
-( 'La Estación', 'Avenida 3 #45-67', 'Comida Americana', 63, 7, 'NO', '11:00 am', '11:00 pm'),
-( 'El Patio', 'Calle 20 #12-34', 'Comida Española', 50, 5, 'SI', '09:00 am', '10:00 pm');
+( 'La Casa de ToÃ±o', 'Carrera 10 #23-45', 'Comida Italiana', 42, 6, 'NO', '12:00 pm', '10:00 pm'),
+( 'El JardÃ­n', 'Calle 15 #67-89', 'Comida Vegetariana', 50, 5, 'SI', '10:00 am', '09:00 pm'),
+( 'La EstaciÃ³n', 'Avenida 3 #45-67', 'Comida Americana', 63, 7, 'NO', '11:00 am', '11:00 pm'),
+( 'El Patio', 'Calle 20 #12-34', 'Comida EspaÃ±ola', 50, 5, 'SI', '09:00 am', '10:00 pm');
 go
 
 INSERT INTO Mesa ( ID_Restaurante, Capacidad_Maxima, Estado_Mesa)
@@ -91,13 +91,13 @@ VALUES
 ( 1, 'Servicio excelente!', '2023-03-26'),
 ( 2, 'La comida estaba deliciosa.', '2023-03-27'),
 ( 3, 'El ambiente era genial.', '2023-03-28'),
-( 4, 'Volveré de nuevo.', '2023-03-29'),
+( 4, 'VolverÃ© de nuevo.', '2023-03-29'),
 ( 5, 'no los recomendare, muy mala experiencia.', '2023-03-30'),
 ( 6, 'muy mala experiencia.', '2023-04-01'),
 ( 7, 'una camida asquerosa', '2023-04-02');
 go
 
-INSERT INTO Calificacion ( ID_Reserva, Calificacion, Fecha_Comentario)
+INSERT INTO Calificacion ( ID_Reserva, Calificacion, Fecha_Calificacion)
 VALUES
 ( 1, 'Excelente', '2023-03-26'),
 ( 2, 'Muy buena', '2023-03-27'),
@@ -105,7 +105,7 @@ VALUES
 ( 4, 'Regular', '2023-03-29'),
 ( 5, 'Mala', '2023-03-30'),
 ( 6, 'Muy mala', '2023-04-01'),
-( 7, 'Pésima', '2023-04-02');
+( 7, 'PÃ©sima', '2023-04-02');
 gO
 
 select * from Restaurantes;
