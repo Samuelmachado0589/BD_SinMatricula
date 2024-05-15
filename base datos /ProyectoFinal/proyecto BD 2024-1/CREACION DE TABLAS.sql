@@ -61,7 +61,7 @@ CREATE TABLE Calificacion (
 ID_Calificacion int IDENTITY (1,1) NOT NULL,
 ID_Reserva int NOT NULL,
 Calificacion Varchar(10) NOT NULL,
-Fecha_Comentario date NOT NULL,
+Fecha_Calificacion date NOT NULL,
 );
 go
 
